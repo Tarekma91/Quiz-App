@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        >
+
+        <!-- Quize text view -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/title"
+            android:textAllCaps="true"
+            style="@style/question_style"
+             />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:paddingTop="2dp"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- user name -->
+        <EditText
+            android:id="@+id/id_user_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_user_name"
+            android:textColor="@android:color/holo_blue_dark"
+            style="@style/question_style"
+             />
+
+
+        <!-- q1 -->
+        <TextView
+            style="@style/question_style"
+            android:text="@string/question1"
+             />
+
+        <!-- Linear layout horizontal contains radio button group and image view for q1-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            >
+
+            <!-- radio button group vertical contains the choices for q1 -->
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <RadioButton
+                    android:id="@+id/choice1_q1"
+                    android:onClick="onRadioButtonClickedQ1"
+                    android:text="Tree"
+                    style="@style/radio_button_style" />
+
+                <RadioButton
+                    android:id="@+id/choice2_q1"
+                    android:onClick="onRadioButtonClickedQ1"
+                    android:text="Flower"
+                    style="@style/radio_button_style" />
+
+                <RadioButton
+                    style="@style/radio_button_style"
+                    android:id="@+id/choice3_q1"
+                    android:onClick="onRadioButtonClickedQ1"
+                    android:text="Apple"
+                     />
+            </RadioGroup>
+
+            <!-- image view for q1 -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/tree" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/view_style" />
+
+        <!-- q2 -->
+        <TextView
+            android:text="@string/question2"
+            style="@style/question_style" />
+
+        <!-- Linear layout horizontal contains radio button group and 2 images for q2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- radio group conaints the choices for q2 -->
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <RadioButton
+                    android:id="@+id/choice1_q2"
+                    android:onClick="onRadioButtonClickedQ2"
+                    android:text="1"
+                    style="@style/radio_button_style" />
+
+                <RadioButton
+                    android:id="@+id/choice2_q2"
+                    android:onClick="onRadioButtonClickedQ2"
+                    android:text="2"
+                    style="@style/radio_button_style" />
+
+            </RadioGroup>
+
+            <!-- 1st image view for q2 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/apple" />
+
+            <!-- 2nd image view for q2 -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/flower" />
+        </LinearLayout>
+
+        <View
+            style="@style/view_style" />
+
+        <!-- q3 -->
+        <TextView
+            android:text="@string/question3"
+            style="@style/question_style" />
+
+
+        <!-- edit text to answer q3 -->
+        <EditText
+            android:id="@+id/id_question3"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:maxLength="4"
+            android:hint=" .... "
+            android:textColor="@android:color/holo_blue_dark"
+            style="@style/question_style" />
+
+        <View
+            style="@style/view_style" />
+
+        <!-- q4 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question4"
+            style="@style/question_style" />
+
+        <!-- linear layout horizontal conatins 3 linear layouts to contains the choices for q4 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <LinearLayout
+                style="@style/linear_layout_q4_style">
+
+                <CheckBox
+                    android:id="@+id/choice1_q4"
+                    style="@style/check_box_style"
+                    android:text="T"
+                    />
+
+                <CheckBox
+                    android:id="@+id/choice2_q4"
+                    style="@style/check_box_style"
+                    android:text="O"
+                    />
+
+                <CheckBox
+                    android:id="@+id/choice3_q4"
+                    style="@style/check_box_style"
+                    android:text="E"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_q4_style">
+
+                <CheckBox
+                    android:id="@+id/choice4_q4"
+                    style="@style/check_box_style"
+                    android:text="I"
+                    />
+
+                <CheckBox
+                    android:id="@+id/choice5_q4"
+                    style="@style/check_box_style"
+                    android:text="A"
+                    />
+
+                <CheckBox
+                    android:id="@+id/choice6_q4"
+                    style="@style/check_box_style"
+                    android:text="Z"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linear_layout_q4_style">
+
+                <CheckBox
+                    android:id="@+id/choice7_q4"
+                    style="@style/check_box_style"
+                    android:text="U"
+                     />
+
+                <CheckBox
+                    android:id="@+id/choice8_q4"
+                    style="@style/check_box_style"
+                    android:text="H"
+                    />
+
+                <CheckBox
+                    android:id="@+id/choice9_q4"
+                    style="@style/check_box_style"
+                    android:text="W"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/view_style" />
+
+        <!-- realtive layout to control the position of the result button free -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/id_result_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:onClick="clickResultButton"
+                android:text="@string/result_button_text" />
+        </RelativeLayout>
+
+
+        <!-- to display the result and it invisible till the button is clicked -->
+        <TextView
+            android:id="@+id/id_result_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+</ScrollView>

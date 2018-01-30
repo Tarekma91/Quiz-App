@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="hint_user_name">your name ?</string> <!--- hint in user name box -->
+    <string name="question1">1- What are you see in this image ?</string>
+    <string name="question2">2- Choose the image of the Apple ?</string>
+    <string name="question3">3- Rearrange these letters R-E-T-E ?</string>
+    <string name="question4">4- Select all vowel letters ?</string>
+    <string name="result_button_text">result</string>
+    <string name="title">quize</string>
+
+</resources>
