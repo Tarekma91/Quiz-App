@@ -10,34 +10,35 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:orientation="vertical"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/padding_value"
+        android:paddingRight="@dimen/padding_value"
         >
 
         <!-- Quize text view -->
         <TextView
+            style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/title"
             android:textAllCaps="true"
-            style="@style/question_style"
              />
 
         <View
             android:layout_width="80dp"
             android:layout_height="1dp"
-            android:paddingTop="2dp"
+            android:layout_gravity="center_horizontal"
             android:background="@android:color/holo_orange_dark"
-            android:layout_gravity="center_horizontal"/>
+            android:paddingTop="2dp" />
 
         <!-- user name -->
         <EditText
             android:id="@+id/id_user_name_text_view"
+            style="@style/edit_text_style"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:hint="@string/hint_user_name"
             android:textColor="@android:color/holo_blue_dark"
-            style="@style/question_style"
              />
 
 
@@ -48,47 +49,36 @@
              />
 
         <!-- Linear layout horizontal contains radio button group and image view for q1-->
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal"
-            >
+        <LinearLayout style="@style/linear_layout_for_radio_button_style">
 
             <!-- radio button group vertical contains the choices for q1 -->
             <RadioGroup
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
+                android:id="@+id/id_radio_group_q1"
+                style="@style/radio_group_style">
 
                 <RadioButton
                     android:id="@+id/choice1_q1"
+                    style="@style/radio_button_style"
                     android:onClick="onRadioButtonClickedQ1"
-                    android:text="Tree"
-                    style="@style/radio_button_style" />
+                    android:text="Tree" />
 
                 <RadioButton
                     android:id="@+id/choice2_q1"
+                    style="@style/radio_button_style"
                     android:onClick="onRadioButtonClickedQ1"
-                    android:text="Flower"
-                    style="@style/radio_button_style" />
+                    android:text="Flower" />
 
                 <RadioButton
-                    style="@style/radio_button_style"
                     android:id="@+id/choice3_q1"
+                    style="@style/radio_button_style"
                     android:onClick="onRadioButtonClickedQ1"
-                    android:text="Apple"
-                     />
+                    android:text="Apple" />
             </RadioGroup>
 
             <!-- image view for q1 -->
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                style="@style/image_view_style"
                 android:src="@drawable/tree" />
 
         </LinearLayout>
@@ -98,88 +88,72 @@
 
         <!-- q2 -->
         <TextView
-            android:text="@string/question2"
-            style="@style/question_style" />
+            style="@style/question_style"
+            android:text="@string/question2" />
 
         <!-- Linear layout horizontal contains radio button group and 2 images for q2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/linear_layout_for_radio_button_style">
 
             <!-- radio group conaints the choices for q2 -->
             <RadioGroup
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_vertical">
+                android:id="@+id/id_radio_group_q2"
+                style="@style/radio_group_style">
 
                 <RadioButton
                     android:id="@+id/choice1_q2"
+                    style="@style/radio_button_style"
                     android:onClick="onRadioButtonClickedQ2"
-                    android:text="1"
-                    style="@style/radio_button_style" />
+                    android:text="1" />
 
                 <RadioButton
                     android:id="@+id/choice2_q2"
+                    style="@style/radio_button_style"
                     android:onClick="onRadioButtonClickedQ2"
-                    android:text="2"
-                    style="@style/radio_button_style" />
+                    android:text="2" />
 
             </RadioGroup>
 
             <!-- 1st image view for q2 -->
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/image_view_style"
                 android:src="@drawable/apple" />
 
             <!-- 2nd image view for q2 -->
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/image_view_style"
                 android:src="@drawable/flower" />
         </LinearLayout>
 
-        <View
-            style="@style/view_style" />
+        <View style="@style/view_style" />
 
         <!-- q3 -->
         <TextView
-            android:text="@string/question3"
-            style="@style/question_style" />
+            style="@style/question_style"
+            android:text="@string/question3" />
 
 
         <!-- edit text to answer q3 -->
         <EditText
             android:id="@+id/id_question3"
+            style="@style/edit_text_style"
             android:layout_height="0dp"
-            android:layout_weight="0.6"
-            android:maxLength="4"
+            android:layout_weight="0.5"
             android:hint=" .... "
-            android:textColor="@android:color/holo_blue_dark"
-            style="@style/question_style" />
+            android:maxLength="4"
+            android:textColor="@android:color/holo_blue_dark" />
 
         <View
             style="@style/view_style" />
 
         <!-- q4 -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/question4"
-            style="@style/question_style" />
+            style="@style/question_style"
+            android:text="@string/question4" />
 
         <!-- linear layout horizontal conatins 3 linear layouts to contains the choices for q4 -->
         <LinearLayout
+            style="@style/linear_layout_for_checkbox_style"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal"
             android:layout_gravity="center"
             >
 
@@ -245,7 +219,7 @@
                 <CheckBox
                     android:id="@+id/choice9_q4"
                     style="@style/check_box_style"
-                    android:text="W"
+                    android:text="W "
                     />
             </LinearLayout>
         </LinearLayout>
@@ -261,11 +235,7 @@
 
             <Button
                 android:id="@+id/id_result_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:onClick="clickResultButton"
-                android:text="@string/result_button_text" />
+                style="@style/button_style" />
         </RelativeLayout>
 
 
@@ -279,7 +249,7 @@
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
 
     </LinearLayout>

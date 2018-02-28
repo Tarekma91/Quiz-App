@@ -1,54 +1,104 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_text_view</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_view_color</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_edit_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+    </style>
+
     <style name="view_style">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">1dp</item>
-        <item name="android:background">@android:color/holo_orange_dark</item>
-        <item name="android:paddingTop">2dp</item>
+        <item name="android:layout_height">@dimen/View_height_value</item>
+        <item name="android:background">@color/view_background</item>
+        <item name="android:paddingTop">@dimen/View_padding_top_value</item>
     </style>
 
     <style name="question_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/text_size_question</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:layout_marginTop">@dimen/question_style_margin_top_value</item>
+        <item name="android:textColor">@color/question_text_color</item>
     </style>
 
     <style name="check_box_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/text_size_check_box</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textColor">@color/checkbox_text_color</item>
     </style>
 
     <style name="radio_button_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/text_size_radio_button</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textColor">@color/radio_button_text_color</item>
+    </style>
+
+    <style name="radio_group_style">
+        <item name="android:layout_width">@dimen/radio_group_width_value</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
     <style name="linear_layout_q4_style">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">@dimen/linear_layout_q4_width_value</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:padding">20dp</item>
+        <item name="android:padding">@dimen/linear_layout_q4_padding_value</item>
     </style>
 
+    <style name="linear_layout_for_radio_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/linear_layout_for_radio_button_height_value</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="linear_layout_for_checkbox_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/linear_layout_for_checkbox_height_value</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="image_view_style">
+        <item name="android:layout_width">@dimen/image_view_width_value</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:text">@string/result_button_text</item>
+    </style>
 
 </resources>
 

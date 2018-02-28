@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="linear_layout_q4_padding_value">20dp</dimen>
+    <dimen name="padding_value">10dp</dimen>
+    <dimen name="linear_layout_q4_width_value">0dp</dimen>
+    <dimen name="radio_group_width_value">0dp</dimen>
+    <dimen name="image_view_width_value">0dp</dimen>
+    <dimen name="linear_layout_for_radio_button_height_value">0dp</dimen>
+    <dimen name="linear_layout_for_checkbox_height_value">0dp</dimen>
+    <dimen name="View_padding_top_value">2dp</dimen>
+    <dimen name="View_height_value">1dp</dimen>
+    <dimen name="question_style_margin_top_value">10dp</dimen>
+    <dimen name="text_size_text_view">30sp</dimen>
+    <dimen name="text_size_edit_text">15sp</dimen>
+    <dimen name="text_size_question">20sp</dimen>
+    <dimen name="text_size_check_box">20sp</dimen>
+    <dimen name="text_size_radio_button">20sp</dimen>
+</resources>
