@@ -81,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if (result.getText().equals(getString(R.string.result_button_text))) { // get result
                     result.setText(getString(R.string.reset_button_text)); // change text to (reset)
-                    arrangLettersQ3(); // to run q3 method
+                    arrangeLettersQ3(); // to run q3 method
                     vowelLettersQ4();  // to run q4 method
 
                     resultTextView.setVisibility(VISIBLE);
                     resultTextView.setText(setResultText());
 
-                    Toast.makeText(getBaseContext(), succeeded() ? "succeeded" : "failed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), (succeeded() ? "succeeded" : "failed") + ", Your score is : " + getPercentScore(), Toast.LENGTH_LONG).show();
                 } else if (result.getText().equals(getString(R.string.reset_button_text))) { // reset all values
 
                     result.setText((getString(R.string.result_button_text))); // change text to (result)
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         radioGroupQ1.clearCheck(); // clear q1 options
         radioGroupQ2.clearCheck(); // clear q2 options
 
-        q3.setText(R.string.hint_question3); // clear q3
+        q3.setText(" "); // clear q3
 
         // clear q4 options
         choice1.setChecked(false);
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @return whatever typed as string
      */
-    public void arrangLettersQ3() {
+    public void arrangeLettersQ3() {
         String q3Text = (q3.getText()).toString();
         if (validateText(q3Text).equalsIgnoreCase("tree")) { // to check if the input word is tree or no
             answerQ3 = true;
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         boolean c8_q4 = choice8.isChecked();
         boolean c9_q4 = choice9.isChecked();
 
-        // check if the incorrect boxes all checked so it's true
+        // check if the correct boxes all checked so it's true
         answerQ4 = (!c1_q4 && !c6_q4 && !c8_q4 && !c9_q4) && (c2_q4 && c3_q4 && c4_q4 && c5_q4 && c7_q4);
 
     }
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
         return
                 "Your name :" + validateText(userName()) +
-                        "\nScore :" + (getPercentScore() / 4) * 100 + "%" +
+                        "\nScore :" + getPercentScore() + "%" +
                         "\nAnswer Q1 :" + answerQ1 +
                         "\nAnswer Q2 :" + answerQ2 +
                         "\nAnswer Q3 :" + answerQ3 +
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerQ2) score++;
         if (answerQ3) score++;
         if (answerQ4) score++;
-        return score;
+        return (score / 4) * 100;
     }
 
     /**
